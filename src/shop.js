@@ -8,5 +8,13 @@ export class Shop {
 	};
     get isOpen(){
         return this._open;
-    }
+    };
+
+    open(){
+        this._open = true;
+    };
+
+    close(){
+        this._open = false;
+    };
 };

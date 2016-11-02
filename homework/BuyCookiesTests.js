@@ -25,4 +25,12 @@ suite('When I Buy Cookies', function () {
             assert.equal(true, canEnterIntoShop);
         });
     });
+
+    suite('When shop is closed', function () {
+        test('I can NOT enter into shop', function() {
+            shop.close();
+            let canEnterIntoShop = person.canEnterIntoShop;
+            assert.equal(false, canEnterIntoShop);
+        });
+    });
 });
