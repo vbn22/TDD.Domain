@@ -8,8 +8,8 @@ suite('When I Buy Cookies', function () {
     let person;
     let shop;
     setup(function() {
-        shop = new Shop('Okey',true);
-        person = new Client(shop);
+        shop = new Shop('Okey',true,{'cookies':8});
+        person = new Client(shop,10);
     });
 
     suite('When I am dont have cookies', function () {
@@ -31,6 +31,15 @@ suite('When I Buy Cookies', function () {
                 assert.equal(true, canBuyCookies);
             });
         });
+
+        suite('When I have enough money (10) for cookies', function () {
+            test('I can buy cookies', function() {
+                let sellResult = person.buy('cookies');
+                assert.equal(true, sellResult);
+            });
+        });
+
+
 
     });
 
