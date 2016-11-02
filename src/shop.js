@@ -1,6 +1,12 @@
 'use strict';
 
 
-export function Shop() {
-
+export class Shop {
+    constructor(name,open) {
+		this._open = open;
+		this._name = name;
+	};
+    get isOpen(){
+        return this._open;
+    }
 };

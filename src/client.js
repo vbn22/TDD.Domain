@@ -1,8 +1,9 @@
 'use strict';
 
 export class Client {
-	constructor() {
+	constructor(shop) {
 		this._cookies = 0;
+		this._shop = shop;
 	};
 
 	get isHungry(){
@@ -12,4 +13,12 @@ export class Client {
             return false
         }
 	};
+
+    get canEnterIntoShop(){
+        if (this._shop.isOpen){
+            return true
+        } else {
+            return false
+        }
+    }
 };
