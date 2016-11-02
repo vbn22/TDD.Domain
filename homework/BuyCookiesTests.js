@@ -39,7 +39,13 @@ suite('When I Buy Cookies', function () {
             });
         });
 
-
+        suite('When I have not enough money (10) for cookies', function () {
+            test('I can buy cookies', function() {
+                person.setWallet(5);
+                let sellResult = person.buy('cookies');
+                assert.equal(false, sellResult);
+            });
+        });
 
     });
 
