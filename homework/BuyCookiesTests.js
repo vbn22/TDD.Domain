@@ -24,6 +24,14 @@ suite('When I Buy Cookies', function () {
             let canEnterIntoShop = person.canEnterIntoShop;
             assert.equal(true, canEnterIntoShop);
         });
+
+        suite('When I have some money', function () {
+            test('I can buy something', function() {
+                let canBuyCookies = person.canBuyCookies;
+                assert.equal(true, canBuyCookies);
+            });
+        });
+
     });
 
     suite('When shop is closed', function () {

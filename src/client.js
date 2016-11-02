@@ -4,6 +4,7 @@ export class Client {
 	constructor(shop) {
 		this._cookies = 0;
 		this._shop = shop;
+        this._wallet= 10;
 	};
 
 	get isHungry(){
@@ -20,5 +21,17 @@ export class Client {
         } else {
             return false
         }
+    }
+
+    get canBuyCookies(){
+        if (this._wallet > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    putInWallet(money){
+        this._wallet += money;
     }
 };
