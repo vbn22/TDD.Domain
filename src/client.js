@@ -1,6 +1,15 @@
 'use strict';
 
+export class Client {
+	constructor() {
+		this._cookies = 0;
+	};
 
-export function Client() {
-
+	get isHungry(){
+		if (this._cookies == 0){
+            return true
+        } else {
+            return false
+        }
+	};
 };
