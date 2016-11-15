@@ -9,7 +9,7 @@ export class Client {
 
 	get isHungry(){
 		if (this._cookies == 0){
-            return true
+            return false
         } else {
             return false
         }
